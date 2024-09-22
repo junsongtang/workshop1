@@ -1,6 +1,6 @@
 ---
 title: "Lab 00 - Hello IDS!"
-author: "INSERT YOUR NAME HERE"
+author: "junsongtang"
 date: "`r Sys.Date()`"
 output: html_document
 ---
@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Tang Junsong", "Lu Junxi", "Lu Yiming", 
+           "Deng Jieming", "Guo Zeyu", "Zhang Boning"),
+  github_username = c("junsongtang", "LU", "YimingLuKevin", 
+                      "Branddenj", "Zeyu Guo", "Jona"), 
+  colour = c("white", "red", "Black", 
+             "green", "purple", "white"),
+  hobby = c("playing guitar", "fitness", "weight training", 
+            "photography", "basketball", "gym"),
+  favourite_number = c(7, 5, 1, 3, 5, 3)
   )
 
 team_data
@@ -47,19 +47,19 @@ p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+This plot shows the Branddenj's favourite colour is green, favourite number is 3, the Jona's favourite colour is white, favourite number is 3, the junsongtang's favourite colour is white, favourite number is 7, the LU's favourite colour is red, favourite number is 5, the YimingLuKevin's favourite colour is black, favourite number is 1, the Zeyu Guo's favourite colour is purple, favourite number is 5.
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "github_username", 
+          y = "favourite_number",
+          title = "favourite")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+
 
 ### Exercise 20
 
@@ -69,4 +69,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+Use different colour to represent different hobbies, take the names of team members as x-axis, put the squares of colour to different members to show their hobbies.
